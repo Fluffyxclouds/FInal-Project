@@ -117,7 +117,7 @@
       title: "The Hangover",
       year: 2009,
       genre: "Comedy",
-      poster: "images/hangover.jpg",
+      poster: "images/Hangover.jpg",
       desc: "After a wild night in Las Vegas, friends must retrace their steps to find the missing groom.",
       trailer: "trailers/TheHangover.mp4"
     },
@@ -320,3 +320,4 @@ document.addEventListener("DOMContentLoaded", () => {
     listContainer.appendChild(card);
   });
 });
+
