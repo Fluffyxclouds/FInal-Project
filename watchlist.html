@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Watchlist | CineVerse</title>
+  <link rel="stylesheet" href="css/movies.css">
+  <link rel="stylesheet" href="css/sttle.css">
+
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html">CineVerse</a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="movies.html">Movies</a>
+      <a href="watchlist.html">Watchlist</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="controls">
+      <button id="themeToggle" aria-label="Toggle theme" class="icon-btn" title="Toggle dark mode">🌓</button>
+      <button id="mobileMenuBtn" class="icon-btn" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <a href="movies.html">Movies</a>
+    <a href="watchlist.html">Watchlist</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+  <main id="watchlist" style="padding:20px">
+    <h2>Your Watchlist</h2>
+    <div id="watchlist-movies" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:20px;"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 CineVerse. All rights reserved.</p>
+  </footer>
+
+  <script src="js/watchlist.js"></script>
+</body>
+</html>

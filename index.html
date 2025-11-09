@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CineVerse — Home</title>
+  <meta name="description" content="CineVerse — modern film base. Browse, search, and sign in (simulated)." />
+  <link rel="stylesheet" href="css/sttle.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">CineVerse</a>
+
+<nav class="main-nav" aria-label="Main navigation">
+  <a href="movies.html">Movies</a>
+  <a href="watchlist.html">Watch list</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="controls">
+  <button id="themeToggle" aria-label="Toggle theme" class="icon-btn" title="Toggle dark mode">🌓</button>
+  <button id="mobileMenuBtn" class="icon-btn" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+</div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="movies.html">Movies</a>
+      <a href="watchlist.html">Watch List</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a id="authLinkMobile" href="profile.html">Sign In</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>CineVerse — Watch, Discover, Repeat</h1>
+        <p class="muted">A modern, responsive film base demo. Explore featured films, search by title, and sign up/login (simulated).</p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="movies.html">Browse Movies</a>
+          <a class="btn ghost" href="#features">Features</a>
+        </div>
+
+        <form id="homeSearch" class="search-inline" role="search" aria-label="Search movies">
+          <label for="q" class="visually-hidden">Search movies</label>
+          <input id="q" name="q" type="search" placeholder="Search movies, year or genre..." autocomplete="off">
+          <button type="submit" class="btn search-btn">Search</button>
+        </form>
+
+      </div>
+
+      <div class="hero-posters" aria-hidden="false">
+        <!-- Posters will be filled by JS for progressive enhancement -->
+        <div class="poster-shelf" id="featuredShelf"></div>
+      </div>
+    </section>
+
+
+    <section class="preview-row">
+      <h2 class="section-title">Featured Now</h2>
+      <div id="previewList" class="movies-row" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <strong>CineVerse</strong> — Demo project for coursework. Images are placeholders.</p>
+      <nav class="footer-nav" aria-label="Footer links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="movies.html">Movies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="movieModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-inner" role="document">
+      <button id="closeModal" class="modal-close" aria-label="Close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

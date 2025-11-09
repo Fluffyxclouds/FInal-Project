@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineVerse | Movies</title>
+  <link rel="stylesheet" href="css/sttle.css">
+  <link rel="stylesheet" href="css/movies.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">CineVerse</a>
+
+      <nav class="main-nav">
+        <a href="movies.html" class="active">Movies</a>
+        <a href="watchlist.html">Watchlist</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="controls">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌓</button>
+        <button id="mobileMenuBtn" class="icon-btn" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="movies.html" class="active">Movies</a>
+      <a href="watchlist.html">Watchlist</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <section class="controls">
+    <input type="text" id="search" placeholder="Search movies...">
+    <select id="genre-filter">
+      <option value="all">All Genres</option>
+      <option value="Action">Action</option>
+      <option value="Drama">Drama</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Horror">Horror</option>
+      <option value="Sci-Fi">Sci-Fi</option>
+    </select>
+  </section>
+
+  <main id="movie-list" class="container"></main>
+
+  <footer class="site-footer">
+    <p>© 2025 CineVerse. All rights reserved.</p>
+  </footer>
+
+
+
+  <script src="js/app.js"></script>
+  <script src="js/movies.js"></script>
+</body>
+</html>

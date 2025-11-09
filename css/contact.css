@@ -1,0 +1,170 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0e0e0e;
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 15px 40px;
+  border-bottom: 2px solid red;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #d10000;
+}
+
+.logo h2 {
+  margin: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar .active {
+  color: red;
+}
+
+/* аккуратная кнопка темы, без страшного красного круга :) */
+.theme-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.theme-btn:hover {
+  transform: scale(1.05);
+  color: #ff3c3c;
+}
+
+/* Contact Section */
+.contact-container {
+  max-width: 600px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.contact-container h2 {
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  color: #ccc;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.contact-form label {
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid red;
+  background: #111;
+  color: white;
+  font-size: 16px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #777;
+}
+
+.contact-form button {
+  background: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 5px;
+}
+
+.contact-form button:hover {
+  background: #d10000;
+}
+
+/* Сообщение под формой */
+.form-message {
+  margin-top: 10px;
+  min-height: 20px;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  background: #111;
+  border-top: 2px solid red;
+}
+
+/* Light Theme */
+body.light {
+  background: #fff;
+  color: #000;
+}
+
+body.light .header,
+body.light .footer {
+  background: #f3f3f3;
+  border-color: red;
+}
+
+body.light .navbar a {
+  color: #000;
+}
+
+body.light .navbar .active {
+  color: red;
+}
+
+body.light .contact-form input,
+body.light .contact-form textarea {
+  background: #fff;
+  color: #000;
+  border-color: red;
+}
+
+/* цвет иконки в светлой теме */
+body.light .theme-btn {
+  color: #111;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | CineVerse</title>
+  <link rel="stylesheet" href="css/sttle.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html">CineVerse</a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="movies.html">Movies</a>
+      <a href="watchlist.html">Watchlist</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <div class="controls">
+      <button id="themeToggle" aria-label="Toggle theme" class="icon-btn" title="Toggle dark mode">🌓</button>
+      <button id="mobileMenuBtn" class="icon-btn" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <a href="movies.html">Movies</a>
+    <a href="watchlist.html">Watchlist</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</header>
+
+
+  <main class="contact-container">
+    <h2>Contact Us</h2>
+    <p>Have any questions? Fill out the form below!</p>
+
+    <form class="contact-form" id="contactForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Your email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+
+      <button type="submit">Send Message</button>
+      <p id="formMessage" class="form-message" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 CineVerse. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // ---------- общая тема, как на movies/about ----------
+    const themeToggle = document.getElementById("theme-toggle");
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+      document.body.classList.add("light");
+    }
+
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("light");
+      localStorage.setItem(
+        "theme",
+        document.body.classList.contains("light") ? "light" : "dark"
+      );
+    });
+
+
+    const form = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !email || !message) {
+        formMessage.textContent = "Please fill out all fields!";
+        formMessage.style.color = "orange";
+      } else {
+        formMessage.textContent = "Message sent successfully!";
+        formMessage.style.color = "lightgreen";
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>
